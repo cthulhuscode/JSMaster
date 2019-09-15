@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Mi primer web</title>
+</head>
+<body>
+	<!--Etiquetas para textos-->
+
+	<h1>Título de mi web</h1>
+	<h2>Bienvenidos a mi web</h2>
+
+	<p>Hola que tal desde el curso</p>
+
+	<br>
+	<hr> <!--Salto de línea con línea-->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<br>
+	<hr>
+	<h3>Otro encabezado</h3>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>Texto en cursiva</em>
+	</p>
+	<span>Span no hace nada</span>
+	<br>
+	<strong>Letra strong</strong>
+	<hr>
+
+	<i>Etiqueta i</i>
+	<blockquote>Etiqueta blockquote</blockquote>
+
+	<!--Listas-->
+	
+	<hr>
+	<h3>Listas</h3>
+	<!--ordenada-->
+	<ol>
+		<li>Manzana
+			<ul>
+				<li>Roja</li>
+				<li>Verde</li>
+			</ul>
+		</li>
+		<li>Naranja</li>
+		<li>Pera</li>
+		<li>Sandía</li>
+	</ol>
+
+	<!--desordenada-->
+	<ul>
+		<li>Manzana</li>
+		<li>Naranja</li>
+		<li>Pera</li>
+		<li>Sandía</li>
+	</ul>
+
+	<!--Imágenes-->
+	<hr>
+	<h3>Imágenes</h3>
+	<img alt="Descripción por si no carga" title="Texto que se muestra" src="./images/img1.jpeg" width="300px">
+
+	<!--Tablas-->
+
+	<hr>
+	<h3>Tablas</h3>
+
+	<table border="1px" >
+		<tr><!--Fila-->
+			<th>Nombre</th><!--Resaltar nombre de columna-->
+			<th>Apellidos</th>
+			<th>País</th>
+		</tr>
+		<tr>
+			<td>Enrique</td><!--Columna-->
+			<td colspan="2">Ruvalcaba Segura</td><!--Aumentar columnas-->
+		</tr>
+		<tr>
+			<td>José</td>
+			<td>Ruvalcaba Segura</td>
+			<td>México</td>
+		</tr>
+	</table>
+
+	<!--Formulario-->
+	<hr>
+	<h3>Formularios</h3>
+
+	<form action="" method="post">
+		<div>
+			<label for="nombre">Nombre:</label> <!--for: campo al que pertenece el label-->
+			<input type="text" name="nombre" placeholder="texto que desaparece al escribir"/>	
+		</div>
+
+		<div>
+			<label for="descripcion">Descripción</label>
+			<textarea name="descripcion"></textarea>	
+		</div>		
+
+		<div>
+			<input type="radio" name="genero" value="Hombre">Hombre <br>
+			<input type="radio" name="genero" value="Mujer">Mujer <br>
+			<input type="radio" name="genero" value="No especificado"> No especificado <br>
+		</div>
+
+		<br>
+		<select>
+			<option value="Hombre">Hombre</option>
+			<option value="Mujer">Mujer</option>
+			<option value="No especificado">No especificado</option>
+		</select>
+
+		<br>
+		<br>
+		<input type="submit" name="" value="Enviar formulario">
+	</form>
+
+</body>
+</html>
