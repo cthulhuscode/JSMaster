@@ -1,0 +1,30 @@
+h1{
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+}
+
+.box{
+    margin: 3%;
+    height: 30%;
+    width: 40%;
+    padding: 20px;
+    border-bottom: 1px solid darkcyan;
+    float: left;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+}
+
+.box input{
+    margin: 1%;
+}
+
+.dashed{
+    border: 2px dashed cornflowerblue;
+}
+
+.dashed h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid cornflowerblue;
+    margin: .5%;
+    text-align: center;
+    width: 50%;
+    margin: 0% 25%;
+}

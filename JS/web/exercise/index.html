@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulando DOM</title>
+    <script src="form.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ejercicio Manipulando DOM</h1>
+    <div class="box">
+        <form action="#" method="POST" id="formulario" onsubmit="return false">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos"><br>
+            
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad"><br>
+    
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Datos del usuario</h3>
+    </div>
+</body>
+</html>
