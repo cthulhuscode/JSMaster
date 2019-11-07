@@ -41,7 +41,7 @@ window.addEventListener('load', ()=>{//Para manipular el document hasta que todo
 
     //Blur
     input.addEventListener('blur', ()=>{
-    console.log('Estás saliendo del input (blur)')  
+        console.log('Estás saliendo del input (blur)')  
     })
 
     //Keydown

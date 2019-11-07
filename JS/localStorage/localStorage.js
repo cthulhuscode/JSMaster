@@ -5,9 +5,9 @@
 window.addEventListener('load', ()=>{
     //Comprobar compatibilidad
     if(typeof Storage !== 'undefined')
-    console.log('LocalStorage is available')
+        console.log('LocalStorage is available')
     else
-    console.log('LocalStorage is unavailable')
+        console.log('LocalStorage is unavailable')
 
     //Save data
     localStorage.setItem('title', 'Hello bro')
