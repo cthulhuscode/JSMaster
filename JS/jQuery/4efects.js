@@ -1,11 +1,11 @@
 $(document).ready(function (){
     $('#btnShow').hide()
-
+    
     //Mostrar boton
     $('#btnShow').click(function (){
         $(this).hide() //Ocultarlo
         $('#btnHide').show() //Mostrar el otro 
-        $('#divBox').fadeIn('fast', function (){
+        $('#divBox').fadeTo('fast', function (){
             console.log('Cartel al descubierto')
         })
                     //slideDown
