@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./../jquery-3.4.1.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--CSS jQuey UI-->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    <!--jQuery UI-->
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="interface.js"></script>
+    <title>jQuery UI</title>
+    <style>
+        *{
+            font-family: 'Roboto';
+        }
+
+        .elemento{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            background: palevioletred;
+            margin: 3%;
+            float: left;
+            text-align: center;
+            font-family: 'Calibri';
+        }
+
+        .lista li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        <!--Modificar los estilos predeterminados de jQuery UI-->
+        ul .ui-selecting{background: dimgrey; color: white;}
+        ul .ui-selected{background: orange; color: white;}
+
+        #elementoMover{
+            overflow: auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            margin: 5px;
+        }
+
+        #area{
+            overflow: auto;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Learning jQuery UI</h1>
+
+    <h2>selectable & sortable</h2>
+
+    <ul class="lista">
+        <li>Penas por amor perdidas</li>
+        <li>El lobo estepario</li>
+        <li>La náusea</li>
+        <li>El túnel</li>
+    </ul>    
+
+    <hr>
+    <h2>resizable & draggable</h2>
+
+    <div class="elemento">Elemento 1</div>
+    <div class="elemento">Elemento 2</div>
+    <div class="elemento">Elemento 3</div>
+
+    <div style="width: 100%; height: 350px;"></div>    
+
+    <hr>
+    <h2>draggable & droppable</h2>
+
+    <div id="elementoMover">Move me</div>
+    <div id="area">Área</div>
+
+    <hr>
+    <h2>effects</h2>
+
+    <button id="btnMostrar">Mostrar</button>
+    <div id="divEfectos" class="elemento" style="display: none;"></div>
+
+    <hr style="margin-top: 300px;">
+    <h2 style="display: block;">Widgets: tooltip</h2>
+
+    <a href="#" title="Acceder a datos del autor">Mis datos</a>
+
+    <hr>
+    <h2>dialog</h2>
+
+    <button id="popup">Salir</button>
+    <div id="dialogo" title="¿Estás seguro de salir?" style="display: none;">
+        <p>Tienes cambios que no han sido guardados.</p>
+    </div>
+
+    <hr>
+    <h2>datePicker</h2>
+
+    <input type="text" id="calendario">
+
+    <hr>
+    <h2>tabs</h2>
+
+    <div id="pestana">
+        <ul>
+            <li><a href="#tabs-1">Tab 1</a></li>
+            <li><a href="#tabs-2">Tab 2</a></li>
+            <li><a href="#tabs-3">Tab 3</a></li>
+        </ul>
+        <div id="tabs-1">First tab</div>
+        <div id="tabs-2">Second tab</div>
+        <div id="tabs-3">Third tab</div>
+    </div>
+
+    <footer style="height: 300px;"></footer>
+</body>
+</html>

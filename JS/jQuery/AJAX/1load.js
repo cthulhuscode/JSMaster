@@ -18,6 +18,8 @@ $(document).ready(function(){
         });
     });
 
+    //POST
+
     //Mandando valores ya generados
     let usuario = { //se pueden usar comillas o no en la clave
         id: "user1",
@@ -40,7 +42,7 @@ $(document).ready(function(){
             correo: $('input[name="correo"]').val()  
         };  
 
-        /*Al presionar el botón, uttr action permitirán tomar los valores
+        /*Al presionar el botón, attr action permitirán tomar los valores
         del formulario como si fuera desde una url */
         $.post($(this).attr('action'), usuario2, (response) => {
             console.log(response);
