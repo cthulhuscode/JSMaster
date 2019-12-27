@@ -1,0 +1,30 @@
+body{
+    background: url('../img/darkTheme.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background: black;
+}
+
+#menu{
+    background: #333;
+}
+
+#menu ul li:hover{
+    color: black;
+    background: gray;
+}
+
+.btnMore{
+    background: black;
+}
+
+.btnMore:hover{
+    background: gray;
+}
+
+
+#sidebar h4{
+    border-bottom: 2px solid black;
+}

@@ -14,13 +14,15 @@
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--Slider (bxSlider)-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--CSS jQuey UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css">
+    <!--jQuery UI-->
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
 
-    <!--Moment JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <!-- jQuery Form Validator - Plugin validación de formulario-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <!--Script-->
     <script type="text/javascript" src="./js/main.js"></script>
@@ -33,7 +35,7 @@
         <div id="toOrange"></div>
     </div>
 
-    <section id="global">
+    <section id="global" style="height: 1200px;">
         <!--Cabecera-->
         <header>
             <div id="logo">
@@ -54,19 +56,36 @@
             </nav>
         </header>
 
-        <!--Slider-->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/slider1.jpg" title="Beautiful books"></div>
-                <div><img src="img/slider2.jpg" title="More books"></div>
-                <div><img src="img/slider3.jpg" title="Books in the dark"></div>
-              </div>
-        </div>
-
         <!--Contenido-->
-        <section id="content">
-            <div id="posts">
-                <!--Cargar datos-->
+        <section id="content" >
+            <div id="box">
+                <!--Cargar formulario-->
+                <h2 style="margin-top: 30px;">Contacto</h2>
+                <form action="" id="fmContact" method="POST">
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" data-validation="alphanumeric">
+
+                    <label for="lastname">Apellidos</label>
+                    <input type="text" name="lastname" data-validation="alphanumeric">
+
+                    <label for="birthdate">Fecha de nacimiento</label>
+                    <input type="text" type="text" name="birthdate" data-validation="date" data-validation-format="dd/mm/yyyy">
+
+                    <label>Edad</label>
+                    <input type="number" name="age" id="age" data-validation="number">
+
+                    <label for="sex" data-validation="required">Sexo</label>
+                    <select name="sex" id="sex">
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input type="text" type="email" name="email" data-validation="email">
+
+                    <input type="submit" value="Enviar">
+                </form>
             </div>
 
             <aside id="sidebar">
@@ -89,6 +108,7 @@
 
                         <input type="submit" value="Log in">
                     </form>
+
                 </div>
             </aside>
 

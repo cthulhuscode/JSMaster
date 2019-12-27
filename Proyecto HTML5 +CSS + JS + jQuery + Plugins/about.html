@@ -14,13 +14,12 @@
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--Slider (bxSlider)-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <!--Moment JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <!--CSS jQuey UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css">
+    <!--jQuery UI-->
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
 
     <!--Script-->
     <script type="text/javascript" src="./js/main.js"></script>
@@ -33,7 +32,7 @@
         <div id="toOrange"></div>
     </div>
 
-    <section id="global">
+    <section id="global" style="height: 1200px;">
         <!--Cabecera-->
         <header>
             <div id="logo">
@@ -54,19 +53,33 @@
             </nav>
         </header>
 
-        <!--Slider-->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/slider1.jpg" title="Beautiful books"></div>
-                <div><img src="img/slider2.jpg" title="More books"></div>
-                <div><img src="img/slider3.jpg" title="Books in the dark"></div>
-              </div>
-        </div>
-
         <!--Contenido-->
-        <section id="content">
-            <div id="posts">
-                <!--Cargar datos-->
+        <section id="content" >
+            <div id="box">
+                <h2 style="margin-top: 30px; margin-bottom: 15px;">Sobre mí</h2>
+                <!--Cargar acordeón-->
+                <div id="acordeon">
+                    <h3>¿Quiénes somos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perspiciatis dolores rerum. Beatae aperiam similique suscipit numquam veritatis magni dolorum ab id! Nesciunt voluptas repellendus facilis ad, sapiente ipsum sit.
+                        </p>
+                    </div>
+
+                    <h3>Nuestros servicios</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perspiciatis dolores rerum. Beatae aperiam similique suscipit numquam veritatis magni dolorum ab id! Nesciunt voluptas repellendus facilis ad, sapiente ipsum sit.
+                        </p>
+                    </div>
+
+                    <h3>Nuestros cientes</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perspiciatis dolores rerum. Beatae aperiam similique suscipit numquam veritatis magni dolorum ab id! Nesciunt voluptas repellendus facilis ad, sapiente ipsum sit.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <aside id="sidebar">
@@ -89,6 +102,7 @@
 
                         <input type="submit" value="Log in">
                     </form>
+
                 </div>
             </aside>
 

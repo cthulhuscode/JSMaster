@@ -1,0 +1,29 @@
+body{
+    background: url('../img/dSlider1.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background: #5200eb;
+}
+
+#menu{
+    background: #333;
+}
+
+#menu ul li:hover{
+    background: #5200eb;
+}
+
+.btnMore{
+    background: #5200eb;
+}
+
+.btnMore:hover{
+    background: #ac82fa;
+}
+
+
+#sidebar h4{
+    border-bottom: 2px solid #5200eb;
+}

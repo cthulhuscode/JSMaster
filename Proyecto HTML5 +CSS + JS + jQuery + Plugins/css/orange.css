@@ -1,0 +1,29 @@
+body{
+    background: url('../img/book.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background:#b85518;
+}
+
+#menu{
+    background: #333;
+}
+
+#menu ul li:hover{
+    background: #b85518;
+}
+
+.btnMore{
+    background: #b85518;
+}
+
+.btnMore:hover{
+    background: #ed8d55;
+}
+
+
+#sidebar h4{
+    border-bottom: 2px solid #b85518;
+}
