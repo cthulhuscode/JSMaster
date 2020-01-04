@@ -1,0 +1,13 @@
+<div [ngStyle]="{
+  'background': conf.fondo,
+  'border': '3px solid black',
+  'border-color': conf.color
+}">
+  <videojuego *ngIf="!hide"></videojuego>
+  <button (click)="hideComponent(true)" *ngIf="!hide">Ocultar componente videojuegos</button>
+  <button (click)="hideComponent(false)" *ngIf="hide">Mostrar componente videojuegos</button>
+  <zapatos></zapatos>
+  <cursos></cursos>
+  <p>Desccripcón: {{conf.descripcion}}</p>
+</div>
+

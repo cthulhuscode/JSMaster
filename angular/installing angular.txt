@@ -1,0 +1,12 @@
+1. Instalar Angular
+    npm install -g @angular/cli
+
+
+- Desinstalar el Angular CLI
+    npm uninstall -g @angular/cli
+
+- Borrar caché del npm de angular
+    npm cache verify
+
+- Borrar cache del npm
+    npm cache clear --force
