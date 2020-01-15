@@ -1,1 +1,5 @@
-<p>cursos works!</p>
+<h3>Tus cursos</h3>
+<h4 *ngIf="nombre">Bienvenido {{nombre}}</h4>
+<h5 *ngIf="cantidad"> Cuentas con {{cantidad}} cursos</h5>
+
+<button (click)="redirigir()">Ir a Zapatos</button>

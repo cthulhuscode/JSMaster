@@ -1,6 +1,74 @@
+<!--Pasar una variable pública de la clase por interpolación-->
 <h2>{{titulo}}</h2>
+<p>Compra las zapatillas de las mejores marcas</p>
 <ul>
-    <li>Adidas Yeezy</li>
-    <li>Adidas Ultra Shadow</li>
-    <li>Adidas NMD</li>
+    <!--Las variables se concatenan con '+' -->
+    <li *ngFor="let marca of marcas; let indice = index">{{indice+1 + ' - ' + marca}}
+        <button (click)="deleteMarca(indice)" [ngStyle] = "{'margin':'8px', 'color':'red', 'font-weight':'bold'}">Eliminar</button>
+    </li>
 </ul>
+
+<h4>Añadir marca</h4>
+<p>
+    <!--ngModel hace que el elemento se vuelva reactivo, los cambios son representados tanto en la vista como en el backend-->
+    <input type="text" [(ngModel)]="marca" (keyup.enter)="showMarca()">
+    <button (click)="addMarca()">Añadir marca</button>
+</p>
+
+<h3>Zapatillas disponibles</h3>
+<ul>
+    <!--Directiva ngFor-->
+    <li *ngFor="let zapato of zapatos">
+        <!--Operador ternario para determinar el estilo CSS-->
+        <span [ngStyle]="{
+            'text-decoration': !zapato.stock ? 'line-through' : 'none'
+        }">
+            {{zapato.nombre}} - 
+            <!--Condiciones que determinen cuándo aplicar los estilos CSS-->
+            <strong 
+                [class.altoPrecio]="zapato.precio > 1999" 
+                [ngClass]="{
+                    'letra': zapato.marca == 'Adidas',
+                    'color': zapato.precio < 1200
+            }">
+                ${{zapato.precio}}
+            </strong>
+        </span>
+        <!--Directiva ngIf-->
+        <span 
+            *ngIf = "zapato.precio <= 1200" 
+            [style.color] = "zapato.precio <= 1200 ? 'green' : 'transparent'"
+            [style.font-weight] = "'bold'"
+        > - ¡OFERTA!          
+        </span>
+
+    </li>
+</ul>
+<!--ngModel vuelve al elemento reactivo-->
+<h5>Color más utilizado</h5><input type="text" [(ngModel)] = "color">
+<!--Switch-->
+<ul [ngSwitch]="color">
+    <!--Case-->
+    <li *ngSwitchCase="'white'">
+        El color predominante es el <span [ngStyle]="{'background':color}">Blanco</span>
+    </li>
+    <li *ngSwitchCase="'black'">
+        El color predominante es el <span [ngStyle] = "{'background' : color}">Negro</span>
+    </li>
+    <li *ngSwitchCase="'orange'">
+        El color predominante es el <span [ngStyle] = "{'background' : color}">Naranja</span>
+    </li>
+    <!--Default-->
+    <li *ngSwitchDefault>
+        El color predominante es el <span [ngStyle] = "{'background' : color}">{{color}}</span>
+    </li>
+</ul>
+
+<h4>Escribir comentario</h4>
+<p>
+    <!--Two way data-binding-->
+    <input type="text" [(ngModel)] = "comentario">
+    <button (click)="alertComentario()">Mostrar comentario</button>
+</p>
+<p><strong>{{comentario}}</strong></p>
+

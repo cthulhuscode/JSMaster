@@ -1,0 +1,44 @@
+<div *ngIf="!user">
+    <p>Cargando...</p>
+</div>
+
+<div *ngIf="user">
+    <img src="{{user.avatar}}" width="200px">
+    <h3>{{user.first_name + ' ' + user.last_name}}</h3>
+
+</div>
+
+<br><br>
+Choose another user: <input type="text" [(ngModel)]='userId' (keyup.enter)='cargaUsuario()'>
+
+<br>
+<p>{{fecha}}</p> <!--Without pipe-->
+<p>{{fecha | date:'fullDate'}}</p> <!--With pipe-->
+<p>{{fecha | date:'dd/MM/yy'}}</p> <!--With pipe-->
+<p>{{fecha | date:'fullDate' | uppercase}}</p> <!--With pipe-->
+<p>{{'PIPE DE LOWERCASE' | lowercase}}</p>
+
+<hr>
+<h3>Pipe propia o personalizada</h3>
+{{5 | calculadora: 4}}
+
+<hr>
+<h2>Checando Método POST</h2>
+
+<br>
+<h3>Crear usuario</h3>
+<form #usP="ngForm" (ngSubmit)="onSubmit(usP)">
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="userPost.name" />
+    </div>
+    <div>
+        <label for="job">Ocupación</label>
+        <input type="text" name="job" #job="ngModel" [(ngModel)]="userPost.job" />
+    </div>
+    <input type="submit" value="Enviar" > 
+</form>
+
+<div *ngIf="userResponse">
+    <h3>{{userResponse.name + ' - ' + userResponse.job}}</h3>
+</div>

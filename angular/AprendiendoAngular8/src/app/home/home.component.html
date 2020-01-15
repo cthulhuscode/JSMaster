@@ -1,0 +1,29 @@
+<h2>Página principal</h2>
+
+<!-- Si la condición se cumple, se realizará lo que esté dentro del div.
+Se puede usar el then para que se ejecute determinada plantilla
+al cumplirse una condición-->
+
+<!--
+<div *ngIf="identificado; else isIdentificado">
+    <h4>Usted está identificado</h4>
+    <button (click)="setIdentificacion(false)">Eliminar credenciales</button>
+</div>
+-->
+
+<div *ngIf="identificado; then humanIdentificated else isIdentificado"></div>
+
+<!--then-->
+<ng-template #humanIdentificated>
+    <h4>Usted está identificado</h4>
+    <button (click)="setIdentificacion(false)">Eliminar credenciales</button>
+</ng-template>
+
+<!--else-->
+<!--La plantilla funcionará como el else del ngIf-->
+<ng-template #isIdentificado>
+    <p>Usted no se ha identificado, pulse el botón para acceder.</p>
+    <button (click)="setIdentificacion(true)">Identificarse</button>
+</ng-template>
+
+
